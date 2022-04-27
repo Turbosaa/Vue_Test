@@ -7,10 +7,5 @@ Vue.config.productionTip = false
 
 // 创建Vue实例对象
 new Vue({
-    render: h => h(App),
-    // mounted() {
-    //     setTimeout(() => {
-    //         this.$destroy()
-    //     },3000)
-    // },
+    render: h => h(App)
 }).$mount('#app')
