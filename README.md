@@ -87,9 +87,7 @@
         }
         ```
 
-    2. 第二步使用混入：
-    ​	 全局混入：```Vue.mixin(xxx)```
-    ​	 局部混入：```mixins:['xxx']```
+    2. 第二步使用混入：全局混入：```Vue.mixin(xxx)``` 局部混入：```mixins:['xxx']```
 
 ## 插件
 
@@ -147,6 +145,7 @@
 2. 浏览器端通过 Window.sessionStorage 和 Window.localStorage 属性来实现本地存储机制
 
 3. 相关API：
+
     1. ```xxxxxStorage.setItem('key', 'value');```该方法接受一个键和值作为参数，会把键值对添加到存储中，如果键名存在，则更新其对应的值
 
     2. ```xxxxxStorage.getItem('person');```该方法接受一个键名作为参数，返回键名对应的值
@@ -156,6 +155,7 @@
     4. ``` xxxxxStorage.clear()```该方法会清空存储中的所有数据
 
 4. 备注：
+
     1. SessionStorage存储的内容会随着浏览器窗口关闭而消失
 
     2. LocalStorage存储的内容，需要手动清除才会消失
@@ -167,7 +167,7 @@
 ## 组件的自定义事件
 1. 一种组件间通信的方式，适用于：<strong style="color:red">子组件 ===> 父组件</strong>
 
-2. 使用场景：A是父组件，B是子组件，B想给A传数据，那么就要在A中给B绑定自定义事件（<span style="color:red">事件的回调在A中</span>）
+2. 使用场景：A是父组件，B是子组件，B想给A传数据，那么就要在A中给B绑定自定义事件（<strong style="color:red">事件的回调在A中</strong>）
 
 3. 绑定自定义事件：
 
@@ -190,4 +190,4 @@
 
 6. 组件上也可以绑定原生DOM事件，需要使用```native```修饰符
 
-7. 注意：通过```this.$refs.xxx.$on('atguigu',回调)```绑定自定义事件时，回调<span style="color:red">要么配置在methods中</span>，<span style="color:red">要么用箭头函数</span>，否则this指向会出问题！
+7. 注意：通过```this.$refs.xxx.$on('atguigu',回调)```绑定自定义事件时，回调<strong style="color:red">要么配置在methods中</strong>，<strong style="color:red">要么用箭头函数</strong>，否则this指向会出问题！
