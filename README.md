@@ -233,7 +233,7 @@
 
 2. 使用步骤：
 
-   1. 安装pubsub：```npm i pubsub-js```
+   1. 安装pubsub：```npm i pubsub-js``` 或 ```yarn add pubsub-js```
 
    2. 引入: ```import pubsub from 'pubsub-js'```
 
