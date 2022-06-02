@@ -275,6 +275,7 @@
         1. v-enter：进入的起点
         2. v-enter-active：进入过程中
         3. v-enter-to：进入的终点
+
       - 元素离开的样式：
         1. v-leave：离开的起点
         2. v-leave-active：离开过程中
