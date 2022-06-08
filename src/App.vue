@@ -12,7 +12,7 @@ export default {
   name: "App",
   methods: {
     getStudents() {
-      axios.get("http://localhost:8080/students").then(
+      axios.get("http://localhost:8080/atguigu/students").then(
         (response) => {
           console.log("请求成功了", response.data);
         },
