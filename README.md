@@ -429,6 +429,3 @@ module.exports = {
                      }
                  </script>
          ```
-   ```
-   
-   ```
