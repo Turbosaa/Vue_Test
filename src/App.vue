@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <Category title="游戏">
-      <template scope="atguigu">
+      <template slot-scope="atguigu">
         <ul>
           <li v-for="(g, index) in atguigu.games" :key="index">{{ g }}</li>
         </ul>
@@ -9,7 +9,7 @@
     </Category>
 
     <Category title="游戏">
-      <template scope="{games}">
+      <template slot-scope="{ games }">
         <ol>
           <li style="color: red" v-for="(g, index) in games" :key="index">
             {{ g }}
