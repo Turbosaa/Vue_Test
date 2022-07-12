@@ -430,7 +430,7 @@ module.exports = {
                  </script>
          ```
 
-         ## Vuex
+## Vuex
 
 ### 1.概念
 
