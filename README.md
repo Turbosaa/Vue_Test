@@ -538,7 +538,6 @@ module.exports = {
 
    ```js
    ......
-   
    const getters = {
    	bigSum(state){
    		return state.sum * 10
