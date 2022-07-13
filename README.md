@@ -201,7 +201,7 @@
    new Vue({
    	......
    	beforeCreate() {
-   		Vue.prototype.$bus = this //安装全局事件总线，$bus就是当前应用的vm
+   		Vue.prototype.$bus = this // 安装全局事件总线，$bus就是当前应用的vm
    	},
        ......
    }) 
@@ -243,7 +243,7 @@
       }
       ......
       mounted() {
-        this.pid = pubsub.subscribe('xxx',this.demo) //订阅消息
+        this.pid = pubsub.subscribe('xxx',this.demo) // 订阅消息
       }
       ```
 
@@ -420,7 +420,7 @@ module.exports = {
                      export default {
                          name:'Category',
                          props:['title'],
-                         //数据在子组件自身
+                         // 数据在子组件自身
                          data() {
                              return {
                                  games:['红色警戒','穿越火线','劲舞团','超级玛丽']
@@ -445,21 +445,21 @@ module.exports = {
 1. 创建文件：```src/store/index.js```
 
    ```js
-   //引入Vue核心库
+   // 引入Vue核心库
    import Vue from 'vue'
-   //引入Vuex
+   // 引入Vuex
    import Vuex from 'vuex'
-   //应用Vuex插件
+   // 应用Vuex插件
    Vue.use(Vuex)
    
-   //准备actions对象——响应组件中用户的动作
+   // 准备actions对象——响应组件中用户的动作
    const actions = {}
-   //准备mutations对象——修改state中的数据
+   // 准备mutations对象——修改state中的数据
    const mutations = {}
-   //准备state对象——保存具体的数据
+   // 准备state对象——保存具体的数据
    const state = {}
    
-   //创建并暴露store
+   // 创建并暴露store
    export default new Vuex.Store({
    	actions,
    	mutations,
@@ -471,11 +471,11 @@ module.exports = {
 
    ```js
    ......
-   //引入store
+   // 引入store
    import store from './store'
    ......
    
-   //创建vm
+   // 创建vm
    new Vue({
    	el:'#app',
    	render: h => h(App),
@@ -488,15 +488,15 @@ module.exports = {
 1. 初始化数据、配置```actions```、配置```mutations```，操作文件```store.js```
 
    ```js
-   //引入Vue核心库
+   // 引入Vue核心库
    import Vue from 'vue'
-   //引入Vuex
+   // 引入Vuex
    import Vuex from 'vuex'
-   //引用Vuex
+   // 引用Vuex
    Vue.use(Vuex)
    
    const actions = {
-       //响应组件中加的动作
+       // 响应组件中加的动作
    	jia(context,value){
    		// console.log('actions中的jia被调用了',miniStore,value)
    		context.commit('JIA',value)
@@ -504,19 +504,19 @@ module.exports = {
    }
    
    const mutations = {
-       //执行加
+       // 执行加
    	JIA(state,value){
    		// console.log('mutations中的JIA被调用了',state,value)
    		state.sum += value
    	}
    }
    
-   //初始化数据
+   // 初始化数据
    const state = {
       sum:0
    }
    
-   //创建并暴露store
+   // 创建并暴露store
    export default new Vuex.Store({
    	actions,
    	mutations,
@@ -532,7 +532,7 @@ module.exports = {
 
 ### 5.getters的使用
 
-1. 概念：当state中的数据需要经过加工后再使用时，可以使用getters加工s
+1. 概念：当state中的数据需要经过加工后再使用时，可以使用getters加工
 
 2. 在```store.js```中追加```getters```配置
 
@@ -545,7 +545,7 @@ module.exports = {
    	}
    }
    
-   //创建并暴露store
+   // 创建并暴露store
    export default new Vuex.Store({
    	......
    	getters
