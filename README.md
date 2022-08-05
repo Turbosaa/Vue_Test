@@ -362,6 +362,7 @@
                 <Category>
                     <div>html结构1</div>
                 </Category>
+
         子组件中：
                 <template>
                     <div>
@@ -375,23 +376,24 @@
 
         ```vue
         父组件中：
-                <Category>
-                    <template slot="center">
-                        <div>html结构1</div>
-                    </template>
-        
-                    <template v-slot:footer>
-                        <div>html结构2</div>
-                    </template>
-                </Category>
-        子组件中：
-                <template>
-                    <div>
-                        <!-- 定义插槽 -->
-                        <slot name="center">插槽默认内容...</slot>
-                        <slot name="footer">插槽默认内容...</slot>
-                    </div>
+            <Category>
+                <template slot="center">
+                    <div>html结构1</div>
                 </template>
+    
+                <template v-slot:footer>
+                    <div>html结构2</div>
+                </template>
+            </Category>
+
+        子组件中：
+            <template>
+                <div>
+                    <!-- 定义插槽 -->
+                    <slot name="center">插槽默认内容...</slot>
+                    <slot name="footer">插槽默认内容...</slot>
+                </div>
+            </template>
         ```
 
     3. 作用域插槽：
@@ -417,25 +419,26 @@
                         <h4 v-for="g in scopeData.games" :key="g">{{g}}</h4>
                     </template>
                 </Category>
+
             子组件中：
-                    <template>
-                        <div>
-                            <slot :games="games"></slot>
-                        </div>
-                    </template>
-                
-                    <script>
-                        export default {
-                            name:'Category',
-                            props:['title'],
-                            // 数据在子组件自身
-                            data() {
-                                return {
-                                    games:['红色警戒', '穿越火线', '劲舞团', '超级玛丽']
-                                }
+                <template>
+                    <div>
+                        <slot :games="games"></slot>
+                    </div>
+                </template>
+            
+                <script>
+                    export default {
+                        name:'Category',
+                        props:['title'],
+                        // 数据在子组件自身
+                        data() {
+                            return {
+                                games:['红色警戒', '穿越火线', '劲舞团', '超级玛丽']
                             }
                         }
-                    </script>
+                    }
+                </script>
             ```
 
 ## Vuex
