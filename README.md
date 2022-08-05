@@ -624,29 +624,29 @@
 
     ```js
     const countAbout = {
-            namespaced:true,// 开启命名空间
-            state:{x:1},
-            mutations: { ... },
-            actions: { ... },
-            getters: {
-                bigSum(state){
-                    return state.sum * 10
-                }
+        namespaced:true,// 开启命名空间
+        state:{x:1},
+        mutations: { ... },
+        actions: { ... },
+        getters: {
+            bigSum(state){
+                return state.sum * 10
             }
+        }
     }
    
     const personAbout = {
-            namespaced:true,// 开启命名空间
-            state:{ ... },
-            mutations: { ... },
-            actions: { ... }
+        namespaced:true,// 开启命名空间
+        state:{ ... },
+        mutations: { ... },
+        actions: { ... }
     }
 
     const store = new Vuex.Store({
-            modules: {
-                countAbout,
-                personAbout
-            }
+        modules: {
+            countAbout,
+            personAbout
+        }
     })
     ```
 
@@ -709,16 +709,16 @@
 
     // 创建router实例对象，去管理一组一组的路由规则
     const router = new VueRouter({
-            routes:[
-                {
-                    path:'/about',
-                    component:About
-                },
-                {
-                    path:'/home',
-                    component:Home
-                }
-            ]
+        routes:[
+            {
+                path:'/about',
+                component:About
+            },
+            {
+                path:'/home',
+                component:Home
+            }
+        ]
     })
 
     // 暴露router
