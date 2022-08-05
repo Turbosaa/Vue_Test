@@ -267,7 +267,7 @@
 
 1. 作用：在插入、更新或移除DOM元素时，在合适的时候给元素添加样式类名
 
-<img src="./public/transition.png" style="width:84%" />
+<img src="./public/transition.png" style="width:100%" />
 
 2. 写法：
 
