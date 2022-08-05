@@ -359,17 +359,17 @@
 
         ```vue
         父组件中：
-                <Category>
-                    <div>html结构1</div>
-                </Category>
+            <Category>
+                <div>html结构1</div>
+            </Category>
 
         子组件中：
-                <template>
-                    <div>
-                        <!-- 定义插槽 -->
-                        <slot>插槽默认内容...</slot>
-                    </div>
-                </template>
+            <template>
+                <div>
+                    <!-- 定义插槽 -->
+                    <slot>插槽默认内容...</slot>
+                </div>
+            </template>
         ```
 
     2. 具名插槽：
