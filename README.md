@@ -688,7 +688,7 @@ module.exports = {
 
 3. 编写router配置项:
 
-   ```js
+   ```javascript
    // 引入VueRouter
    import VueRouter from 'vue-router'
    // 引入路由组件
