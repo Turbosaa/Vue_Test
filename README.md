@@ -786,7 +786,7 @@
 
     ```vue
     <!-- 跳转并携带query参数，to的字符串写法 -->
-    <router-link :to="/home/message/detail?id=666&title=你好">跳转</router-link>
+    <router-link to="/home/message/detail?id=666&title=你好">跳转</router-link>
                     
     <!-- 跳转并携带query参数，to的对象写法 -->
     <router-link 
