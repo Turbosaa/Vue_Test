@@ -1,10 +1,14 @@
 <template>
-  <h2>我是Home的内容</h2>
+  <ul>
+    <li>news001</li>
+    <li>news002</li>
+    <li>news003</li>
+  </ul>
 </template>
 
 <script>
 export default {
   // eslint-disable-next-line vue/multi-word-component-names
-  name: "Home",
+  name: "News",
 };
 </script>
