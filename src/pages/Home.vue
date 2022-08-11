@@ -5,6 +5,7 @@
       <ul class="nav nav-tabs">
         <li>
           <router-link
+            replace
             class="list-group-item"
             active-class="active"
             to="/home/news"
@@ -13,6 +14,7 @@
         </li>
         <li>
           <router-link
+            replace
             class="list-group-item"
             active-class="active"
             to="/home/message"
