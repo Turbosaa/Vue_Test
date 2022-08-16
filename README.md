@@ -283,7 +283,7 @@
             2. v-leave-active：离开过程中
             3. v-leave-to：离开的终点
 
-   2. 使用```<transition>```包裹要过度的元素，并配置name属性：
+    2. 使用```<transition>```包裹要过度的元素，并配置name属性：
 
         ```vue
         <transition name="hello">
@@ -943,3 +943,46 @@ changeOrigin默认值为true
 2. 浏览器的历史记录有两种写入方式：分别为```push```和```replace```，```push```是追加历史记录，```replace```是替换当前记录，路由跳转时候默认为```push```
 
 3. 如何开启```replace```模式：```<router-link replace .......>News</router-link>```
+
+### 9.编程式路由导航
+
+1. 作用：不借助```<router-link> ```实现路由跳转，让路由跳转更加灵活
+
+2. 具体编码：
+
+    ```js
+    // $router的两个API
+    this.$router.push({
+   	name:'xiangqing',
+   		params:{
+   			id:xxx,
+   			title:xxx
+   		}
+    })
+    
+    this.$router.replace({
+        name:'xiangqing',
+            params:{
+                id:xxx,
+                title:xxx
+            }
+    })
+
+    this.$router.forward() // 前进
+
+    this.$router.back() // 后退
+
+    this.$router.go() // 可前进也可后退
+    ```
+
+### 10.缓存路由组件
+
+1. 作用：让不展示的路由组件保持挂载，不被销毁
+
+2. 具体编码：
+
+    ```vue
+    <keep-alive include="News"> 
+        <router-view></router-view>
+    </keep-alive>
+    ```
