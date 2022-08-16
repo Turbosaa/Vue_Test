@@ -20,13 +20,7 @@
           >
         </li>
       </ul>
-      <!-- 缓存多个路由组件 -->
-      <!-- <keep-alive :include="['News','Message']"> -->
-
-      <!-- 缓存一个路由组件 -->
-      <keep-alive include="News">
-        <router-view></router-view>
-      </keep-alive>
+      <router-view></router-view>
     </div>
   </div>
 </template>
@@ -36,12 +30,12 @@ export default {
   // eslint-disable-next-line vue/multi-word-component-names
   name: "Home",
   /* beforeDestroy() {
-			console.log('Home组件即将被销毁了')
-		}, */
+        console.log('Home组件即将被销毁了')
+    }, */
   /* mounted() {
-			console.log('Home组件挂载完毕了',this)
-			window.homeRoute = this.$route
-			window.homeRouter = this.$router
-		},  */
+        console.log('Home组件挂载完毕了',this)
+        window.homeRoute = this.$route
+        window.homeRouter = this.$router
+    },  */
 };
 </script>
