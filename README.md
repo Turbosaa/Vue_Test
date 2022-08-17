@@ -897,8 +897,7 @@ changeOrigin默认值为true
                 id:666,
                 title:'你好'
             }
-        }"
-    >跳转</router-link>
+        }">跳转</router-link>
     ```
 
 > 特别注意：路由携带params参数时，若使用to的对象写法，则不能使用path配置项，必须使用name配置！
