@@ -1007,8 +1007,8 @@ changeOrigin默认值为true
     // 全局前置守卫：初始化时执行、每次路由切换前执行
     router.beforeEach((to,from,next) => {
         console.log('beforeEach', to, from)
-        if (to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
-            if(localStorage.getItem('school') === 'atguigu'){ // 权限控制的具体规则
+        if(to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
+            if(localStorage.getItem('school') === 'atguigu') { // 权限控制的具体规则
                 next() // 放行
             } else {
                 alert('暂无权限查看')
@@ -1022,7 +1022,7 @@ changeOrigin默认值为true
     // 全局后置守卫：初始化时执行、每次路由切换后执行
     router.afterEach((to,from) => {
         console.log('afterEach', to, from)
-        if (to.meta.title) { 
+        if(to.meta.title) { 
             document.title = to.meta.title // 修改网页的title
         } else {
             document.title = 'vue_test'
@@ -1035,8 +1035,8 @@ changeOrigin默认值为true
     ```js
     beforeEnter(to,from,next){
         console.log('beforeEnter',to,from)
-        if (to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
-            if (localStorage.getItem('school') === 'atguigu') {
+        if(to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
+            if(localStorage.getItem('school') === 'atguigu') {
                 next()
             } else {
                 alert('暂无权限查看')
