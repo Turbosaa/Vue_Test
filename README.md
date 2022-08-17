@@ -953,19 +953,19 @@ changeOrigin默认值为true
     ```js
     // $router的两个API
     this.$router.push({
-   	name:'xiangqing',
-   		params:{
-   			id:xxx,
-   			title:xxx
-   		}
+        name:'xiangqing',
+        params:{
+            id:xxx,
+            title:xxx
+        }
     })
     
     this.$router.replace({
         name:'xiangqing',
-            params:{
-                id:xxx,
-                title:xxx
-            }
+        params:{
+            id:xxx,
+            title:xxx
+        }
     })
 
     this.$router.forward() // 前进
