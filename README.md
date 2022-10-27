@@ -173,7 +173,7 @@
 
 3. 绑定自定义事件：
 
-    1. 第一种方式，在父组件中：```<Demo @atguigu="test"/>``` 或 ```<Demo v-on:atguigu="test"/>```
+    1. 第一种方式，在父组件中：```<Demo @example="test"/>``` 或 ```<Demo v-on:example="test"/>```
 
     2. 第二种方式，在父组件中：
 
@@ -181,19 +181,19 @@
         <Demo ref="demo"/>
         ......
         mounted(){
-            this.$refs.xxx.$on('atguigu', this.test)
+            this.$refs.xxx.$on('example', this.test)
         }
         ```
 
     3. 若想让自定义事件只能触发一次，可以使用```once```修饰符，或```$once```方法
 
-4. 触发自定义事件：```this.$emit('atguigu', 数据)```		
+4. 触发自定义事件：```this.$emit('example', 数据)```		
 
-5. 解绑自定义事件：```this.$off('atguigu')```
+5. 解绑自定义事件：```this.$off('example')```
 
 6. 组件上也可以绑定原生dom事件，需要使用```native```修饰符
 
-7. 注意：通过```this.$refs.xxx.$on('atguigu', 回调)```绑定自定义事件时，回调<strong style="color:red">要么配置在methods中</strong>，<strong style="color:red">要么用箭头函数</strong>，否则this指向会出问题！
+7. 注意：通过```this.$refs.xxx.$on('example', 回调)```绑定自定义事件时，回调<strong style="color:red">要么配置在methods中</strong>，<strong style="color:red">要么用箭头函数</strong>，否则this指向会出问题！
 
 ## 全局事件总线（GlobalEventBus）
 
@@ -1007,7 +1007,7 @@ changeOrigin默认值为true
     router.beforeEach((to,from,next) => {
         console.log('beforeEach', to, from)
         if (to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
-            if (localStorage.getItem('school') === 'atguigu') { // 权限控制的具体规则
+            if (localStorage.getItem('school') === 'example') { // 权限控制的具体规则
                 next() // 放行
             } else {
                 alert('暂无权限查看')
@@ -1035,7 +1035,7 @@ changeOrigin默认值为true
     beforeEnter(to,from,next){
         console.log('beforeEnter',to,from)
         if (to.meta.isAuth) { // 判断当前路由是否需要进行权限控制
-            if (localStorage.getItem('school') === 'atguigu') {
+            if (localStorage.getItem('school') === 'example') {
                 next()
             } else {
                 alert('暂无权限查看')
